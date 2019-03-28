@@ -121,6 +121,7 @@ void haveEye()
 	SMove temp;
 	for (temp.x=1; temp.x<=9; temp.x++){
 		for (temp.y=1; temp.y<=9; temp.y++){
+			//已经判断是眼了为什么还要上下是否为墙？
 			if (isEye(temp, board)){
 				if (temp_board[temp.x+1][temp.y] != BORDER)
 					eye[temp_board[temp.x+1][temp.y]]++;
