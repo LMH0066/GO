@@ -63,6 +63,7 @@ void PrintTempBoard()
 	return ;
 }
 
+//初始化temp_board
 void boardCopy()
 {
 	int i, j;
@@ -78,6 +79,7 @@ bool isEye(SMove pMove, char temp_board[][GRID_NUM]){
 	SMove temp = pMove;
 	if (temp_board[temp.x][temp.y] != 0)
 		return false;
+	//这里判断了左右，左上，右下，上下。我觉得不太合理，应该是左上，左下，右上，右下
 	if (temp_board[temp.x-1][temp.y] != temp_board[temp.x+1][temp.y] && 
 		temp_board[temp.x-1][temp.y] != BORDER &&
 		temp_board[temp.x+1][temp.y] != BORDER)
